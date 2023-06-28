@@ -17,7 +17,11 @@ const resetPasswordMail = async (name, email, token) => {
     try {
 
         const transporter = nodemailer.createTransport({
-            service: 'Gmail',
+            host: 'smtp.gmail.com',
+            port: 587,
+            secure: false,
+            requireTLS: true,
+
             auth: {
                 user: userEmail,
                 pass: userPassword
