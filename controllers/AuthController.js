@@ -28,7 +28,7 @@ const resetPasswordMail = async (name, email, token) => {
             from: userEmail,
             to: email,
             subject: 'for reset the password',
-            html: `<p>Hello ${name} please copy the link <a href="http://localhost:5173/reset-password/${token}">reset your password</a> this link is valid for only 5 minute</p>`
+            html: `<p>Hello ${name} please copy the link <a href="https://auth-todo-app.netlify.app/reset-password/${token}">reset your password</a> this link is valid for only 5 minute</p>`
         }
 
         transporter.sendMail(mailOptions, (err, info) => {
